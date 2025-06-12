@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="start-screen" class="start-screen">
+            <h1>Welcome to the Quiz!</h1>
+            <p>Test your knowledge with these questions. You'll get your score at the end.</p>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <div id="quiz-screen" class="quiz-screen hidden">
+            <div class="quiz-header">
+                <div class="question-count">Question <span id="question-number">1</span>/<span id="total-questions">5</span></div>
+                <div class="timer">Time: <span id="time">30</span>s</div>
+                <div class="score">Score: <span id="current-score">0</span></div>
+            </div>
+
+            <div id="question-container">
+                <h2 id="question">Question will appear here</h2>
+                <div id="options-container" class="options-container">
+                    <!-- Options will be inserted here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="quiz-navigation">
+                <button id="prev-btn" disabled>Previous</button>
+                <button id="next-btn">Next</button>
+                <button id="submit-btn" class="hidden">Submit Quiz</button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="result-screen hidden">
+            <h1>Quiz Completed!</h1>
+            <div class="result-details">
+                <p>Your final score: <span id="final-score">0</span>/<span id="max-score">0</span></p>
+                <p id="result-message">Keep practicing to improve!</p>
+                <canvas id="score-chart" width="300" height="300"></canvas>
+            </div>
+            <button id="restart-btn">Take Quiz Again</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
